@@ -6,9 +6,9 @@
 
     <parent>
         <groupId>com.fitechsoft</groupId>
-        <artifactId>fitech-core</artifactId>
+        <artifactId>fitech-common</artifactId>
         <version>1.0-SNAPSHOT</version>
-        <relativePath>../fitech-core</relativePath>
+        <relativePath>../fitech-common</relativePath>
     </parent>
     <artifactId>core-flow</artifactId>
 
