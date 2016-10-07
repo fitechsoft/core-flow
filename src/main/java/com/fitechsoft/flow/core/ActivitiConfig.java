@@ -68,8 +68,4 @@ public class ActivitiConfig extends InfrastructureConfig {
         return processEngine().getObject().getRepositoryService();
     }
 
-    @Bean
-    public ResumeService resumeService(){
-        return new ResumeService();
-    }
 }

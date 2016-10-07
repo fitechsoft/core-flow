@@ -28,6 +28,20 @@ public class FFInstance extends FDObject {
                 .processInstanceId(instance.getId())
                 .orderByTaskName().asc()
                 .list();
+
+        List<FFTask> ffTasks = new ArrayList<>();
+
+        tasks.forEach((task) -> ffTasks.add(new FFTask(task)));
+
+        return ffTasks;
+    }
+
+    public List<FFTask>  getTasksForUser(String user){
+        List<Task> tasks = taskService.createTaskQuery()
+                .taskCandidateOrAssigned(user)
+                .orderByTaskName().asc()
+                .list();
+
         List<FFTask> ffTasks = new ArrayList<>();
 
         tasks.forEach((task) -> ffTasks.add(new FFTask(task)));
