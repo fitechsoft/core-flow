@@ -68,4 +68,9 @@ public class ActivitiConfig extends InfrastructureConfig {
         return processEngine().getObject().getRepositoryService();
     }
 
+    @Bean
+    public ResumeService resumeService() throws Exception {
+        return new ResumeService();
+    }
+
 }
